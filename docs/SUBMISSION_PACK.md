@@ -165,3 +165,9 @@ See `docs/QA_CHECKPOINT_PHASE3.md` and `docs/QA_CHECKPOINT_TOKENOPS_DISPERSE.md`
 ## Repository
 
 **GitHub:** https://github.com/mrcryptooo/cipherops
+
+## Production Deployment
+
+**Live URL:** https://cipherops-orcin.vercel.app  
+**Deploy URL:** https://cipherops-rij05d8e6-mrcrypto.vercel.app  
+**Inspect:** https://vercel.com/mrcrypto/cipherops/E92MzkyVpzoATfRvyuzih36qinj3
