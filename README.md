@@ -6,6 +6,12 @@ CipherOps is an infrastructure layer over Zama's on-chain confidential token reg
 
 ---
 
+## Repository
+
+**GitHub:** https://github.com/mrcryptooo/cipherops
+
+---
+
 ## In-App Docs
 
 In-app product documentation is available at **[/docs](http://localhost:3000/docs)** — covers what CipherOps is, all flows, verified addresses, privacy model, limitations, and quick start guide.

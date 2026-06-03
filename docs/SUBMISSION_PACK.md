@@ -159,3 +159,9 @@ See `docs/QA_CHECKPOINT_PHASE3.md` and `docs/QA_CHECKPOINT_TOKENOPS_DISPERSE.md`
 - Recommended demo pair: cUSDCMock / USDCMock on Sepolia
 - Have MetaMask pre-funded with Sepolia ETH before recording
 - The registry table is horizontally scrollable on mobile
+
+---
+
+## Repository
+
+**GitHub:** https://github.com/mrcryptooo/cipherops
