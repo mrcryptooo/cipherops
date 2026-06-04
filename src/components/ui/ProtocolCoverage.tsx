@@ -51,7 +51,7 @@ export function ProtocolCoverage() {
           className="rounded px-2 py-0.5 text-xs font-semibold"
           style={{ background: "rgba(255,210,8,0.12)", color: "#FFD208", border: "1px solid rgba(255,210,8,0.22)" }}
         >
-          {liveCount} / {ITEMS.length} live
+          {liveCount} / {ITEMS.length} live · Sepolia verified
         </span>
       </div>
 

@@ -53,8 +53,11 @@ export function GuidedQuickstart() {
             Run through the full confidential-token lifecycle using official Zama wrappers.
           </p>
         </div>
-        <span className="mt-2 rounded border border-zinc-700/50 bg-zinc-800/60 px-2 py-0.5 text-xs font-medium text-zinc-500 sm:mt-0 sm:flex-shrink-0">
-          Steps 1–5 available
+        <span
+          className="mt-2 rounded px-2 py-0.5 text-xs font-medium sm:mt-0 sm:flex-shrink-0"
+          style={{ background: "rgba(255,210,8,0.10)", border: "1px solid rgba(255,210,8,0.22)", color: "#FFD208" }}
+        >
+          All 5 steps live · Verified
         </span>
       </div>
 

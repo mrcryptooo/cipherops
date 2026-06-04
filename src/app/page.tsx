@@ -24,20 +24,23 @@ export default function HomePage() {
 
       {/* ── Hero ────────────────────────────────────────────────────────── */}
       <section
-        className="relative overflow-hidden"
-        style={{ background: "radial-gradient(ellipse 80% 60% at 60% 20%, rgba(255,210,8,0.05) 0%, transparent 65%), #000" }}
+        className="relative grid-bg"
+        style={{
+          background: "radial-gradient(ellipse 80% 60% at 60% 20%, rgba(255,210,8,0.06) 0%, transparent 65%), #000",
+          overflow: "hidden",
+        }}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-          <div className="flex flex-col gap-10 py-16 sm:py-24 lg:flex-row lg:items-center lg:gap-16">
+          <div className="flex flex-col gap-10 py-14 sm:py-20 lg:flex-row lg:items-center lg:gap-12">
 
-            <div className="flex-1 lg:max-w-[540px]">
-              <p className="mb-5 text-xs font-semibold uppercase" style={{ color: Y, letterSpacing: "0.18em" }}>
+            <div className="flex-1 lg:max-w-[480px]">
+              <p className="fade-slide-in mb-5 text-xs font-semibold uppercase" style={{ color: Y, letterSpacing: "0.18em" }}>
                 Confidential Token Registry
               </p>
-              <h1 className="text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
+              <h1 className="fade-slide-in-delay-1 text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
                 Make token<br />balances private
               </h1>
-              <p className="mt-5 max-w-md text-base leading-relaxed" style={{ color: "#999" }}>
+              <p className="fade-slide-in-delay-2 mt-5 max-w-md text-base leading-relaxed" style={{ color: "#999" }}>
                 A Zama-native interface for confidential token lifecycle and private token operations.
               </p>
 
@@ -49,13 +52,13 @@ export default function HomePage() {
                 >
                   Launch Registry ↓
                 </Link>
-                <a
-                  href="#operations-preview"
+                <Link
+                  href="/operations"
                   className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition-colors hover:border-[#FFD208]/30 hover:text-[#FFD208]"
                   style={{ background: CARD, border: `1px solid ${BORDER}`, color: "#bbb" }}
                 >
                   Explore Operations
-                </a>
+                </Link>
               </div>
 
               <div className="mt-7 flex flex-wrap gap-2">
@@ -71,7 +74,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="w-full lg:flex-1">
+            {/* Video column — wider than text side, bleeds right on xl+ */}
+            <div className="w-full lg:flex-[1.3] xl:mr-[-3rem]">
               <HeroVideo />
             </div>
           </div>

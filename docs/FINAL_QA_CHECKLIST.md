@@ -202,3 +202,57 @@ Run through every item before Git checkpoint / public demo / submission.
 - [ ] `node_modules/` is NOT staged
 - [ ] No `console.log` with private data in committed code
 - [ ] Git status shows only intended tracked files
+
+---
+
+## Visual QA
+
+- [ ] Home statuses accurate — no "Coming Soon" for verified products (Disperse, Airdrop, Vesting all Live)
+- [ ] FeatureMenu shows 8 live cards with SVG icons and "Live · Verified" badges
+- [ ] OperationsPreview shows all 4 products as Live (Disperse, Airdrop, Vesting, Recipient)
+- [ ] LifecycleStrip step 5 "Operate" is yellow/live — no "soon" badge
+- [ ] Subtle grid background visible on hero section
+- [ ] Entrance animations play on hero copy (no jank)
+- [ ] Yellow glow pulse on CTA button
+- [ ] All feature card icons visible (SVG, no broken images)
+- [ ] Mobile layout clean — no overflow
+- [ ] Zama palette only (no blue/cyan/purple)
+- [ ] No broken links from updated OperationsPreview cards
+- [ ] Logo mark: **TODO** — current mark can be interpreted as "H"; CipherOps may need a C-based mark before final branding
+
+---
+
+## Logo note (tracking)
+
+> The current CipherOps logo mark (`/brand/cipherops-logo-yellow.png`) can be interpreted as the letter "H" rather than "C" for CipherOps. Before final public branding, the mark should be revised to a clear "C"-based or cipher/hex motif. This does not block current submission — tracked here for the post-launch polish cycle.
+
+---
+
+## Asset & Brand QA
+
+- [ ] New C-based logo (`public/brand/cipherops-logo-yellow.png`) renders in nav — no blurring or stretching
+- [ ] Logo appears as yellow C-mark (not the old H-like shape)
+- [ ] Hero video plays on Home (`/hero/cipherops-hero-transform.mp4`) — full frame visible, not cropped
+- [ ] Video container background (`#0D0D0D`) blends seamlessly with Home background
+- [ ] No visible border/mismatch around video frame
+- [ ] Home has NO "Coming Soon", "Coming next", "In preparation", or "soon" for any verified product
+- [ ] FeatureMenu: all 8 cards show "Live · Verified" badge
+- [ ] OperationsPreview: all 4 cards show Live status and link to their routes
+- [ ] LifecycleStrip: all 5 steps yellow/live — no grey "soon" chip
+- [ ] PrivacyLifecycle: all 4 stages active, yellow numbered circles (no sky/blue)
+- [ ] GuidedQuickstart: badge says "All 5 steps live · Verified"
+- [ ] ProtocolCoverage: badge says "6 / 6 live · Sepolia verified"
+
+---
+
+## Hero Video Polish QA
+
+- [ ] Hero video appears larger and cinematic on desktop (roughly 1.4–1.5× previous size)
+- [ ] Video container bleeds slightly to right edge on XL screens; stays contained on mobile
+- [ ] Scroll-synced motion: subtle scale + upward drift as user scrolls past hero
+- [ ] prefers-reduced-motion: no scroll animation applied for reduced-motion users
+- [ ] Yellow ambient glow visible behind video frame (subtle, not garish)
+- [ ] Hero video is borderless — blends seamlessly with #0D0D0D background
+- [ ] Hero video does NOT cause horizontal overflow on mobile (≤375px viewport)
+- [ ] Video still autoplays, muted, loop, playsInline
+- [ ] Fallback card shown if video fails to load
