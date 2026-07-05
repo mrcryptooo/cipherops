@@ -14,6 +14,7 @@ const NAV_LINKS = [
   { label: "Operations",href: "/operations", external: false },
   { label: "Airdrop",   href: "/airdrop",    external: false },
   { label: "Vesting",   href: "/vesting",    external: false },
+  { label: "Runway",    href: "/runway",     external: false },
   { label: "Docs",      href: "/docs",       external: false },
 ];
 

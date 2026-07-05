@@ -34,4 +34,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-.vercel
+# hardhat
+/artifacts
+/cache
+/typechain-types
+
+# local agent tooling (not part of the shipped app)
+.claude/
