@@ -36,8 +36,10 @@ export default function AirdropPage() {
                 Confidential Airdrop
               </h1>
               <p className="mt-3 max-w-2xl text-sm leading-relaxed" style={{ color: "#888" }}>
-                Create and fund a campaign, then issue per-recipient encrypted claim authorizations.
-                Amounts are FHE-encrypted — only each recipient can see what they received.
+                Create and fund a campaign, then issue per-recipient encrypted claim authorizations —
+                for example, rewarding your first users at different amounts based on how early they
+                joined, without turning the payout list into a public leaderboard. Amounts are
+                FHE-encrypted; only each recipient can see what they received.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">

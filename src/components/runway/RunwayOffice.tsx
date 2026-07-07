@@ -28,10 +28,11 @@ import {
   type EligibleStorylet,
 } from "@/lib/runway/engine";
 import { applyChoice, applyBeat, recordMission } from "@/lib/runway/apply";
-import { saveGameState, loadGameState, clearGameState } from "@/lib/runway/persistence";
+import { saveGameState, loadGameState, clearGameState, hasSeenIntro, markIntroSeen, clearIntroSeen } from "@/lib/runway/persistence";
 import { OfficeBackdrop } from "./OfficeBackdrop";
 import { MissionVerify } from "./MissionVerify";
 import { CareerProfile } from "./CareerProfile";
+import { RunwayIntro } from "./RunwayIntro";
 import { RUNWAY_Y as Y, RUNWAY_YDIM as YDIM, RUNWAY_YBORDER as YBORDER, RUNWAY_CARD as CARD, RUNWAY_BORDER as BORDER, RUNWAY_GLASS_BLUR as GLASS_BLUR } from "@/lib/runway/theme";
 import type { CharacterId, GameState, MissionRecord, StoryletChoice } from "@/lib/runway/types";
 
@@ -188,6 +189,7 @@ export function RunwayOffice() {
   const [state, setState] = useState<GameState>(() => loadGameState() ?? createInitialGameState());
   const [stage, setStage] = useState<Stage>(() => (state.flags.has("episode-complete") ? { kind: "episode-end", text: "" } : { kind: "office" }));
   const [verifiedMissionId, setVerifiedMissionId] = useState<string | null>(null);
+  const [showIntro, setShowIntro] = useState(() => !hasSeenIntro());
 
   useEffect(() => {
     saveGameState(state);
@@ -211,9 +213,11 @@ export function RunwayOffice() {
 
   function handlePlayAgain() {
     clearGameState();
+    clearIntroSeen();
     const fresh = createInitialGameState();
     setState(fresh);
     setStage({ kind: "office" });
+    setShowIntro(true);
   }
 
   function handleChoice(choice: StoryletChoice) {
@@ -464,6 +468,20 @@ export function RunwayOffice() {
           Review your career
         </button>
       </Scene>
+    );
+  }
+
+  if (showIntro) {
+    return (
+      <div className="runway-app">
+        <OfficeBackdrop quarter={state.world.quarter} />
+        <RunwayIntro
+          onContinue={() => {
+            markIntroSeen();
+            setShowIntro(false);
+          }}
+        />
+      </div>
     );
   }
 

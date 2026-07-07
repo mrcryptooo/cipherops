@@ -41,9 +41,10 @@ export default function OperationsPage() {
                 Operations Studio
               </h1>
               <p className="mt-3 max-w-2xl text-sm leading-relaxed" style={{ color: "#888" }}>
-                Send confidential token payouts to multiple recipients using TokenOps
-                Confidential Disperse. Individual amounts are FHE-encrypted — only each
-                recipient can see what they received.
+                Send confidential token payouts to multiple recipients in a single transaction —
+                for example, paying ten contractors ten different amounts without any of them
+                seeing what the others were paid. Individual amounts are FHE-encrypted; only each
+                recipient can ever see what they received.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">

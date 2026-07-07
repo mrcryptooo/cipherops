@@ -61,3 +61,34 @@ export function clearGameState(): void {
     // ignore
   }
 }
+
+// Tracks whether the one-time intro screen has been dismissed this session —
+// cleared alongside the save on replay, so a fresh playthrough sees it again.
+const INTRO_SEEN_KEY = "runway:q1:intro-seen";
+
+export function hasSeenIntro(): boolean {
+  if (typeof window === "undefined") return true;
+  try {
+    return window.sessionStorage.getItem(INTRO_SEEN_KEY) === "1";
+  } catch {
+    return true;
+  }
+}
+
+export function markIntroSeen(): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.sessionStorage.setItem(INTRO_SEEN_KEY, "1");
+  } catch {
+    // ignore
+  }
+}
+
+export function clearIntroSeen(): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.sessionStorage.removeItem(INTRO_SEEN_KEY);
+  } catch {
+    // ignore
+  }
+}

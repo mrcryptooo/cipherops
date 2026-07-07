@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "@rainbow-me/rainbowkit/styles.css";
 import { Providers } from "@/components/Providers";
+import { ProductTour } from "@/components/layout/ProductTour";
 
 export const metadata: Metadata = {
   title: "CipherOps Registry — Every confidential token. One place.",
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className="min-h-screen bg-[#0a0a0f] text-zinc-200 antialiased">
         <Providers>{children}</Providers>
+        <ProductTour />
       </body>
     </html>
   );

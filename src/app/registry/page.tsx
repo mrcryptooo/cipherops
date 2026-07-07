@@ -43,7 +43,10 @@ export default function RegistryPage() {
 
           {/* Subtitle */}
           <p className="mt-3 max-w-2xl text-sm leading-relaxed" style={{ color: "#888" }}>
-            Use Zama official wrapper registry to test the full confidential token lifecycle on Sepolia.
+            Wrap any ERC-20 into its confidential ERC-7984 form so balances stay private on-chain.
+            A payroll token is a good example: everyone can see the contract exists, but only each
+            employee can ever reveal their own balance. Reveal or unwrap back to the public token
+            any time you need to.
           </p>
 
           {/* Pill badges */}

@@ -36,8 +36,9 @@ export default function VestingPage() {
                 Confidential Vesting
               </h1>
               <p className="mt-3 max-w-2xl text-sm leading-relaxed" style={{ color: "#888" }}>
-                Deploy vesting manager clones, create time-locked ERC-7984 schedules with encrypted
-                allocations, and let recipients claim privately on Sepolia.
+                Create time-locked schedules with encrypted allocations — for example, vesting a new
+                hire&apos;s equity over four years without the exact amount ever being visible to the
+                rest of the team. Recipients claim privately on Sepolia as their schedule unlocks.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
